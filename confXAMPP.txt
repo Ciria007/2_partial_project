@@ -1,0 +1,28 @@
+configure xampp to send email link
+http://stackoverflow.com/questions/15965376/how-to-configure-xampp-to-send-mail-from-localhost
+
+
+In C:\xampp\php\php.ini, in php.ini file find [mail function] and change:
+
+SMTP=smtp.gmail.com
+smtp_port=587
+sendmail_from = trial.rescate1@gmail.com
+sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
+
+C:\xampp\sendmail\sendmail.ini. Replace all the existing code in sendmail.ini with following code
+
+[sendmail]
+
+smtp_server=smtp.gmail.com
+smtp_port=587
+error_logfile=error.log
+debug_logfile=debug.log
+auth_username=trial.rescate1@gmail.com
+auth_password=rescate1.trial
+force_sender=trial.rescate1@gmail.com
+
+
+
+_______
+email=trial.rescate1@gmail.com
+password=rescate1.trial
